@@ -3,6 +3,13 @@
 @section('title','dettaglio fumetto')
 
 @section('content')
+<p>
+  @if(session('Inserisci'))
+  <div class="btn-success p-2 rounded-3">
+    {{session('Inserisci')}}
+  </div>
+  @endif
+</p>
 <div class="card m-5" style="width: 18rem;">
   <img src="{{$comic->immage}}" class="card-img-top" alt="{{$comic->title}}">
   <div class="card-body">
